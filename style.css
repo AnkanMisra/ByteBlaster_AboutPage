@@ -11,6 +11,26 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.team-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Adjust the height as needed */
+}
+
+.team-description .wrapper {
+  text-align: center;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust background color and opacity */
+  border-radius: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s; /* Add transition for background color */
+}
+
+.team-description:hover .wrapper {
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color opacity on hover */
+}
+
 
 
 .row {
@@ -33,21 +53,20 @@ h1 {
 }
 
 .card {
-  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  box-shadow: 0 0 2.4em black;
   padding: 3.5em 1em;
   border-radius: 0.6em;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s, rotateY 0.5s; /* Added transition for rotation */
-  background-color: linear-gradient(#ffffff, #f5f5f5);
-  border: 2px solid #a993ff;
+  transition: transform 0.3s, box-shadow 0.3s, rotateY 0.5s; 
+  border: 2px solid yellow;
 }
 
 .card:hover {
   background: linear-gradient(#6045ea, #8567f7);
   color: #ffffff;
-  transform: scale(1.05) rotateY(5deg); /* Added rotation transformation on hover */
-  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.3); /* Changed box-shadow on hover */
+  transform: scale(1.05) rotateY(5deg); 
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.3);
 }
 
 .card .img-container {
@@ -121,3 +140,4 @@ footer {
     padding: 0 1em;
   }
 }
+
