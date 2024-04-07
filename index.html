@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByteBlaster-Teams</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section>
+    <div class="row">
+        <h1>Team ByteBlaster</h1>
+    </div>
+    <div class="animated-text">
+        We are the <span></span>
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Winners of Uxopia", "Best Begginer team in Devwrap", "next Aspiring Developer", "UI/UX Designers"]'>
+            <span class="wrap"></span>
+          </a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="img-container">
+                    <img src="adityaphoto.jpeg" />
+                </div>
+                <h2>Aditya Ghosh</h2>
+                <p>Team Leader | UI Designer <br> <br>
+                <b>Skills</b> <br> 
+                 Python | HTML &amp; CSS | JS <br> Data Anaylysis | Git &amp; Github | FireBase <br>Flutter | API Handling</p>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/aditya-ghosh-475b44281/">
+                        <img src="LinkedIn.png"style="width: 32px; height: 32px;">
+                    <a href="https://github.com/aditya-ghosh2992">
+                        <img src="Git.png" style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="mailto:aditya.ghosh.23@aot.edu.in">
+                        <img src="mail.png"style="width: 32px; height: 32px;">
+                    <a href="https://wa.me/+919163902992">
+                        <img src="Whatsapp.png"style="width: 32px; height: 32px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="img-container">
+                    <img src="ankanphoto.jpeg" />
+                </div>
+                <h2>Ankan Misra</h2>
+                <p>Back End Developer <br> <br>
+                <b>Skills</b> <br> 
+                 Java | C | Python | HTML | CSS | JS | Ruby <br> Figma | Git &amp; Github | React | MongoDB | FireBase </p>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/ankan-misra-386981279/">
+                        <img src="LinkedIn.png"style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="https://github.com/AnkanMisra">
+                        <img src="Git.png" style="width: 32px; height: 32px;">
+                    </a>
+                    <a href= "mailto: ankan.misra.23@aot.edu.in">
+                        <img src="mail.png"style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="wa.me/+916290060705">
+                        <img src="Whatsapp.png"style="width: 32px; height: 32px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="img-container">
+                    <img src="sumanphoto.jpeg" />
+                </div>
+                <h2>Suman Naresh Jain</h2>
+                <p>Front End Developer <br> <br>
+                <b>Skills</b> <br> 
+                    Python | C | C++ | Java | HTML | CSS <br> JS | Git &amp; Github | Figma <br> NodeJs</p>
+                <div class="icons">
+                    <a href="https://www.linkedin.com/in/suman-naresh-jain-126a80283/">
+                        <img src="LinkedIn.png"style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="https://github.com/SumanJain2005">
+                        <img src="Git.png" style="width: 32px; height: 32px;">
+                    </a>
+                    <a href= "mailto: suman.jain.23@aot.edu.in">
+                        <img src="mail.png"style="width: 32px; height: 32px;">
+                    </a>
+                    <a href="wa.me/+918910517534">
+                        <img src="Whatsapp.png"style="width: 32px; height: 32px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <p>Copyright &copy; Team Byte Blaster 2024</p>
+</footer>
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+</body>
+</html>
