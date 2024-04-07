@@ -188,8 +188,11 @@ footer {
 @media (max-width: 600px) {
   .logo{
     display: flex;
-    padding-left: 100px;
     height: 200px;
     width: 200px;
+  }
+  header{
+    align-items: center;
+    justify-content: center;
   }
 }
