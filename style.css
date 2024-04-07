@@ -182,8 +182,8 @@ footer {
   .logo {
     display: flex;
     justify-content: center; /* Align the logo horizontally in the center */
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     margin: auto; /* Center the logo vertically */
   }
 }
@@ -193,8 +193,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center; /* Align the logo vertically in the center */
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
   }
   header {
     display: flex;
