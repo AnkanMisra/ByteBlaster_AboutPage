@@ -179,12 +179,16 @@ footer {
   }
 }
 @media (max-width: 800px) {
+  .image{
+    height: 150px; 
+    width: 200px;
+  }
   .logo {
     display: flex;
-    justify-content: center; /* Align the logo horizontally in the center */
-    height: 90px; /* 50% smaller */
-    width: 90px; /* 50% smaller */
-    margin: auto; /* Center the logo vertically */
+    justify-content: center; 
+    height: 180px;
+    width: 180px;
+    margin: auto; 
   }
 }
 
@@ -193,8 +197,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center; /* Align the logo vertically in the center */
-    height: 90px; /* 50% smaller */
-    width: 90px; /* 50% smaller */
+    height: 180px;
+    width: 180px;
   }
   header {
     display: flex;
