@@ -196,7 +196,7 @@ footer {
   .logo {
     display: flex;
     justify-content: center;
-    align-items: center; /* Align the logo vertically in the center */
+    align-items: center; 
     height: 180px;
     width: 180px;
   }
@@ -206,13 +206,9 @@ footer {
     align-items: center;
   }
 }
-/* Example media query for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 600px) {
   
   .video-container {
-    /* Adjust styles for the video container on smaller screens */
-    height: 100%; /* Example: reduce height for smaller screens */
+    height: 100%; 
   }
-
-  /* Add more styles as needed */
 }
