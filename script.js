@@ -1,5 +1,5 @@
 let vid = document.getElementById("background-video");
-vid.playbackRate = 1;
+vid.playbackRate = 2;
 
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
